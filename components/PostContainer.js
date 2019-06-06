@@ -23,6 +23,7 @@ function PostContainer({ dark, postsData, theme }) {
           padding-top: 30px;
           color: ${dark ? textColorForDark : textColorForLight};
           width: 100%;
+          padding-bottom: 100px;
         }
 
         h3 {

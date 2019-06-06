@@ -20,9 +20,9 @@ function PostSnippet({
         <h1>{title}</h1>
       </Link>
 
-      <small>{getTimeSincePost(date)} - {timeToRead} minute read</small>
-
       <p>{snippet}</p>
+
+      <small>{getTimeSincePost(date)} - {timeToRead} minute read</small>
 
       <style jsx>{`
         .article {

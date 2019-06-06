@@ -14,7 +14,7 @@ const AuthorStyle = ({ dark, theme }) => (
       border: none;
       padding: 30px;
       background: ${dark ? polished.darken(0.05, theme.darkColor) : polished.lighten(0.05, theme.lightColor)};
-      box-shadow: 0 3px 35px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   }
 
   .title-section {

@@ -72,7 +72,7 @@ function Header({
                 color: ${dark ? '#fff' : '#484848'};
                 background: ${dark ? theme.darkColor : theme.lightColor };
                 height: ${isScrolled ? '60px' : '100px'};
-                border-bottom:  ${isScrolled ? '1px #ddd solid' : 'none'};
+                border-bottom:  ${isScrolled ? 'none' : 'none'};
                 transition: height 420ms, background 420ms, border-bottom 420ms;
             }
 
