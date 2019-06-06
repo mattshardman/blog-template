@@ -1,6 +1,7 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import { withRouter } from 'next/router';
+import Head from 'next/head';
 import Prismic from 'prismic-javascript';
 
 import { reformatIncomingPostData } from '../lib/utils/utilFunctions';
@@ -13,7 +14,7 @@ class MyApp extends App {
     super(props);
     const { dark } = props.router.query;
     this.state = {
-      dark: dark === 'dark' || true,
+      dark: dark === 'dark' || false,
     };
   }
 
@@ -38,6 +39,9 @@ class MyApp extends App {
 
     return (
       <Container>
+        <Head>
+          <meta name="theme-color" content={dark ? theme.darkColor : theme.lightColor} />
+        </Head>
         <Header
           dark={dark}
           setDark={() => this.setState({ dark: !dark })}
