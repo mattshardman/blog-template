@@ -25,7 +25,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const mailchimp = new Mailchimp(MAILCHIMP_API_KEY as string);
 
-    await mailchimp.post('/lists/<your-api-key>/members', {
+    await mailchimp.post('/lists/<your-list-number>/members', {
       email_address: email,
       FNAME: name,
       status: 'subscribed',
