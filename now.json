@@ -8,6 +8,6 @@
     }
   ],
   "env": {
-    "API_KEY": ""
+    "MAILCHIMP_API_KEY": ""
   }
 }
