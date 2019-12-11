@@ -12,7 +12,7 @@ Live Example: [gear-head.now.sh](https://gear-head.now.sh)
 <img src="https://res.cloudinary.com/dgdniqfi9/image/upload/v1576039047/portfolio/Screenshot_2019-12-11_at_12.35.08.png" width="30%">
 
 ### Blog page
-<img src="https://res.cloudinary.com/dgdniqfi9/image/upload/v1576039424/portfolio/Screenshot_2019-12-11_at_12.43.33.png" width="50%"Ì>
+<img src="https://res.cloudinary.com/dgdniqfi9/image/upload/v1576039424/portfolio/Screenshot_2019-12-11_at_12.43.33.png" width="50%">
 
 
 # What does it do?
