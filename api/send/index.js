@@ -12,8 +12,8 @@ module.exports = async (req, res) => {
   const request = await json(req);
   const { name, email } = request;
   try {
-    await mailchimp.post('/lists/57351c6acf/members', {
-      email_address: email,
+    await mailchimp.post('', {
+      EMAIL: email,
       FNAME: name,
       status: 'subscribed',
     });
