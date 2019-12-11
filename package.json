@@ -13,7 +13,7 @@
   "author": "Matt Hardman",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "dotenv": "^6.2.0",
     "mailchimp-api-v3": "^1.12.1",
     "micro": "^9.3.3",
