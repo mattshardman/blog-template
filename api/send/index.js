@@ -4,15 +4,15 @@ const dotEnv = require('dotenv');
 
 dotEnv.config();
 
-const { API_KEY } = process.env;
+const { MAILCHIMP_API_KEY } = process.env;
 
-const mailchimp = new Mailchimp(API_KEY);
+const mailchimp = new Mailchimp(MAILCHIMP_API_KEY);
 
 module.exports = async (req, res) => {
   const request = await json(req);
   const { name, email } = request;
   try {
-    await mailchimp.post('', {
+    await mailchimp.post('/lists/<your-list>/members', {
       EMAIL: email,
       FNAME: name,
       status: 'subscribed',
