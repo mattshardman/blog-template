@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Switch({ dark, setDark }) {
   return (
-    <div className="switch">
+    <button type="button" className="switch" onClick={() => setDark(!dark)}>
       <div className="dark">
         <i
           className="fas fa-moon"
@@ -16,32 +16,35 @@ function Switch({ dark, setDark }) {
           style={{ fontSize: 14, color: '#fff' }}
         />
       </div>
-      <button
-        type="button"
+      <div
         className="slider"
-        onClick={() => setDark(!dark)}
       />
       <style jsx>{`
         .switch {
+            box-sizing: border-box;
             display: flex;
             position: relative;
             width: 60px;
             height: 30px;
-            border-radius: 15px;
+            border-radius: 20px;
             background: #000;
+            outline: none;
+            cursor: pointer;
         }
 
         .slider {
             position: absolute;
-            height: 30px;
-            width: 30px;
-            border-radius: 15px;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            height: 28px;
+            width: 28px;
+            border-radius: 14px;
             background: #fff;
             outline: none;
             border: 3px #000 solid;
             transition: transform 400ms;
-            transform: translateX(${dark ? '0%' : '100%'});
-            cursor: pointer;
+            transform: translateX(${dark ? '0' : '30px'});
         }
 
         .dark {
@@ -63,7 +66,7 @@ function Switch({ dark, setDark }) {
         }
       `}
       </style>
-    </div>
+    </button>
   );
 }
 

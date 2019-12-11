@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Search({ search }) {
   const [active, setActive] = React.useState(false);
@@ -25,7 +25,7 @@ function Search({ search }) {
           background: #fff;
           align-items: center;
           transition: box-shadow 400ms;
-          box-shadow: ${active ? "0 4px 15px rgba(0,0,0,0.15)" : "none"};
+          box-shadow: ${active ? '0 4px 15px rgba(0,0,0,0.15)' : 'none'};
         }
 
         input {
@@ -43,13 +43,14 @@ function Search({ search }) {
         .material-icons {
             color: #000;
         }
-      `}</style>
+      `}
+      </style>
     </form>
   );
 }
 
 Search.propTypes = {
-  search: PropTypes.func.isRequired
+  search: PropTypes.func.isRequired,
 };
 
 export default Search;

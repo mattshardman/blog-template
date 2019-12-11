@@ -1,9 +1,7 @@
-import React from "react";
-import PT from "prop-types";
-// import PostSnippet from "./PostSnippet";
+import React from 'react';
+import PT from 'prop-types';
 import Snippet from './PostSnippet';
-import withTheme from "../lib/withTheme";
-import Search from "./Search";
+import Search from './Search';
 
 function PostContainer({ dark, postsData, theme }) {
   const { textColorForDark, textColorForLight, altColors } = theme;
@@ -13,10 +11,10 @@ function PostContainer({ dark, postsData, theme }) {
   const mapPosts = () => {
     const pwd = postsData.map(post => ({ ...post, display: true }));
     return pwd;
-  }
+  };
 
-  const search = searchTerm => {
-    const filteredPosts = posts.map(post => {
+  const search = (searchTerm) => {
+    const filteredPosts = posts.map((post) => {
       if (post.title.toLowerCase().includes(searchTerm.toLowerCase())) {
         return { ...post, display: true };
       }
@@ -25,7 +23,7 @@ function PostContainer({ dark, postsData, theme }) {
         return { ...post, display: true };
       }
 
-      if (searchTerm === "") {
+      if (searchTerm === '') {
         return { ...post, display: true };
       }
 
@@ -45,8 +43,7 @@ function PostContainer({ dark, postsData, theme }) {
       <h3>Posts</h3>
       <Search search={search} />
       {posts.map(
-        post =>
-          post.display && <Snippet key={post.id} dark={dark} {...post} />
+        post => post.display && <Snippet key={post.id} dark={dark} {...post} />,
       )}
 
       <style jsx>
@@ -72,7 +69,7 @@ function PostContainer({ dark, postsData, theme }) {
 PostContainer.propTypes = {
   theme: PT.shape(PT.string.isRequired).isRequired,
   dark: PT.bool.isRequired,
-  postsData: PT.arrayOf(PT.object).isRequired
+  postsData: PT.arrayOf(PT.object).isRequired,
 };
 
-export default withTheme(PostContainer);
+export default PostContainer;

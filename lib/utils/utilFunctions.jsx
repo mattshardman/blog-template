@@ -73,39 +73,38 @@ export const htmlSerializer = (type, element, content, children, key) => {
       return React.createElement('ol', propsWithUniqueKey(props, key), children);
 
     case Elements.image: // Image
-    return (
-      <div
-        key={key}
-        style={{
-          maxWidth: "100%",
-          display: "flex",
-          justifyContent: "center"
-        }}
-      >
-        <ProgressiveImage src={element.url} placeholder="">
-          {(src, loading) =>
-            loading ? (
+      return (
+        <div
+          key={key}
+          style={{
+            maxWidth: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          <ProgressiveImage src={element.url} placeholder="">
+            {(src, loading) => (loading ? (
               <div
                 style={{
                   width: element.dimensions.width * 0.6,
                   height: element.dimensions.height * 0.6,
-                  maxWidth: "100%",
-                  background: "rgba(0,0,0,0.2)"
+                  maxWidth: '100%',
+                  background: 'rgba(0,0,0,0.2)',
                 }}
               />
             ) : (
-              <div style={{ width: '100%'  }}>
-              <img
-                src={src}
-                alt={element.alt || ""}
-                width="100%"
-              />
+              <div style={{ width: '100%' }}>
+                <img
+                  src={src}
+                  alt={element.alt || ''}
+                  width="100%"
+                />
               </div>
-            )
+            ))
           }
-        </ProgressiveImage>
-      </div>
-    );
+          </ProgressiveImage>
+        </div>
+      );
 
     case Elements.embed: // Embed
       props = Object.assign({

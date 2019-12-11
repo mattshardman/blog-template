@@ -34,7 +34,6 @@ function Header({
   return (
     <header className="wrapper header">
       <Link
-        prefetch
         href={{
           pathname: '/',
           query: { dark },
@@ -70,7 +69,7 @@ function Header({
                 align-items: center;
                 justify-content: space-between;
                 color: ${dark ? '#fff' : '#484848'};
-                background: ${dark ? theme.darkColor : theme.lightColor };
+                background: ${dark ? theme.darkColor : theme.lightColor};
                 height: ${isScrolled ? '60px' : '100px'};
                 border-bottom:  ${isScrolled ? 'none' : 'none'};
                 transition: height 420ms, background 420ms, border-bottom 420ms;

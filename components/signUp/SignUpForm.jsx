@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import PT from "prop-types";
+import React, { useState } from 'react';
+import PT from 'prop-types';
 
 function SignUpForm({
   sendResult,
@@ -7,13 +7,13 @@ function SignUpForm({
   emailPlaceHolder,
   btnText,
   altColors,
-  textColorForDark
+  textColorForDark,
 }) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   return (
-    <form action="" className="form" onSubmit={(e) => sendResult(e, name, email)}>
+    <form action="" className="form" onSubmit={e => sendResult(e, name, email)}>
       <input
         type="text"
         placeholder={namePlaceHolder}
@@ -96,7 +96,7 @@ SignUpForm.propTypes = {
   emailPlaceHolder: PT.string.isRequired,
   btnText: PT.string.isRequired,
   altColors: PT.arrayOf(PT.string.isRequired).isRequired,
-  textColorForDark: PT.string.isRequired
+  textColorForDark: PT.string.isRequired,
 };
 
 export default SignUpForm;

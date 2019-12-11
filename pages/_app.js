@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import { withRouter } from 'next/router';
 import Head from 'next/head';
 import Prismic from 'prismic-javascript';
@@ -38,14 +38,14 @@ class MyApp extends App {
     const { darkColor, lightColor } = theme;
 
     return (
-      <Container>
+      <>
         <Head>
-          <meta name="theme-color" content={dark ? theme.darkColor : theme.lightColor} />
+          <meta
+            name="theme-color"
+            content={dark ? theme.darkColor : theme.lightColor}
+          />
         </Head>
-        <Header
-          dark={dark}
-          setDark={() => this.setState({ dark: !dark })}
-        />
+        <Header dark={dark} setDark={() => this.setState({ dark: !dark })} />
         <div className="main">
           <Component
             postsData={reformattedPosts}
@@ -54,17 +54,18 @@ class MyApp extends App {
           />
         </div>
 
-        <style jsx>{`
-          .main {
-            min-height: 100vh;
-            box-sizing: border-box;
-            width: 100%;
-            background: ${dark ? darkColor : lightColor};
-            transition: background 420ms;
-          }
-        `}
+        <style jsx>
+          {`
+            .main {
+              min-height: 100vh;
+              box-sizing: border-box;
+              width: 100%;
+              background: ${dark ? darkColor : lightColor};
+              transition: background 420ms;
+            }
+          `}
         </style>
-      </Container>
+      </>
     );
   }
 }
