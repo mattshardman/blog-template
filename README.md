@@ -2,6 +2,15 @@
 
 Live Example: [gear-head.now.sh](https://gear-head.now.sh)
 
+# TL:DR
+
+* Fork and clone repo
+* Create prismic repository
+* Link prismic repository by updating lib/config
+* Update details in lib/config and lib/theme
+* Change project title in now.json
+* Deploy using ```now --prod```
+
 ### Dark mode
 <img src="https://res.cloudinary.com/dgdniqfi9/image/upload/v1576039050/portfolio/Screenshot_2019-12-11_at_12.33.53.png" width="50%"/>
 
