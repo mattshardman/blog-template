@@ -4,11 +4,11 @@ Live Example: [gear-head.now.sh](https://gear-head.now.sh)
 
 # TL:DR
 
-* Fork and clone repo
+* Fork and clone repository
 * Create prismic repository
-* Link prismic repository by updating lib/config
-* Update details in lib/config and lib/theme
-* Change project title in now.json
+* Link prismic repository by updating ```lib/config```
+* Update details in ```lib/config``` and ```lib/theme```
+* Change project title in ```now.json```
 * Deploy using ```now --prod```
 
 ### Dark mode
