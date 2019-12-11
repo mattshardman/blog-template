@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "alias": ["elen-blog"],
+  "alias": ["gear-head"],
   "builds": [
     {
       "src": "next.config.js",
       "use": "@now/next"
-    },
-    {
-      "src": "/api/send/index.js",
-      "use": "@now/node"
     }
   ],
   "env": {
